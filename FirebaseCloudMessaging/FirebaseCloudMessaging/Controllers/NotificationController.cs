@@ -5,7 +5,7 @@ namespace FirebaseCloudMessaging.Controllers
 {
     public class NotificationController : Controller
     {
-        //[Authorize(Roles="Administrator")]
+        [Authorize(Roles = "Administrator")]
         public IActionResult Index()
         {
             return View();
