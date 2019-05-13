@@ -29,8 +29,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                    </ul>
+                    <ul class="navbar-nav flex-grow-1"></ul>
                 </div>
             </div>
         </nav>
@@ -72,6 +71,12 @@
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Firebase JS SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-messaging.js"></script>
+    <script src="~/js/init-firebase.js"></script>
+    <!---->
 
     @RenderSection("Scripts", required: false)
 </body>
