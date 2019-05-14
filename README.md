@@ -18,14 +18,11 @@ At the bottom of layout page add firebase scripts
 Inside wwwroot/lib create new js file which will handle token.
 
 ` 
-// Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Retrieve Firebase Messaging object.
 const messaging = firebase.messaging();
 
 messaging.requestPermission().then(function () {
