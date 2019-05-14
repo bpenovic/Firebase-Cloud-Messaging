@@ -10,14 +10,14 @@ Firebase Cloud Messaging workshop for DUMP Days 2019. conference
 ## 1. Get and store user tokens
 At the bottom of layout page add firebase scripts  
 
-    ` <!-- Firebase JS SDKs -->
+     <!-- Firebase JS SDKs -->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-messaging.js"></script>
-    <!----> `
+    <!----> 
 
 Inside wwwroot/lib create new js file which will handle token.  
 
-     ` const firebaseConfig = {
+      const firebaseConfig = {
     };
 
     firebase.initializeApp(firebaseConfig);
@@ -38,4 +38,4 @@ Inside wwwroot/lib create new js file which will handle token.
     }).catch(function (err) {
       console.log('Unable to get permission to notify.', err);
     });
-     `
+     
