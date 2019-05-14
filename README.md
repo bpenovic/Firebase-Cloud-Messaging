@@ -8,7 +8,8 @@ Firebase Cloud Messaging workshop for DUMP Days 2019. conference
 4. Handle sending notifications
 
 ## 1. Get and store user tokens
-At the bottom of layout page add firebase scripts 
+At the bottom of layout page add firebase scripts  
+
     ` <!-- Firebase JS SDKs -->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-messaging.js"></script>
