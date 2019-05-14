@@ -70,3 +70,18 @@ body {
     height: 20px;
     margin-top: -5px;
 }
+
+@media screen and (max-width: 575px) {
+    .footer .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .footer .container img {
+        height: 20px;
+        margin-top: -5px;
+    }
+}
