@@ -46,3 +46,18 @@ Inside Views/Home index.cshtml add Script section:
      }
 
 **Now, when we start the application with https url, we should be asked for notifications and after that get token (See in console f12)**
+
+
+Create new Database Model called Token  
+      `   public class Token  
+         {  
+             [Key]  
+             public Guid TokenId { get; set; }  
+             [Required]  
+             public bool IsActive { get; set; }  
+             [Required]  
+             public string Value { get; set; }  
+             [Required]  
+             public DateTime CreatedUtc { get; set; }  
+             public DateTime ModifiedUtc { get; set; }  
+         }   `
