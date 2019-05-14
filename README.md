@@ -15,28 +15,27 @@ At the bottom of layout page add firebase scripts
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-messaging.js"></script>
     <!----> `
 
-Inside wwwroot/lib create new js file which will handle token.
+Inside wwwroot/lib create new js file which will handle token.  
 
-` 
-const firebaseConfig = {
-};
+     ` const firebaseConfig = {
+    };
 
-firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
 
-const messaging = firebase.messaging();
+    const messaging = firebase.messaging();
 
-messaging.requestPermission().then(function () {
-  console.log('Notification permission granted.');
-  messaging.getToken().then(function (currentToken) {
-    if (currentToken) {
-      console.log('Current token: ', currentToken);
-    } else {
-      console.log('No Instance ID token available. Request permission to generate one.');
-    }
-  }).catch(function (err) {
-    console.log('An error occurred while retrieving token. ', err);
-  });
-}).catch(function (err) {
-  console.log('Unable to get permission to notify.', err);
-});
-`
+    messaging.requestPermission().then(function () {
+      console.log('Notification permission granted.');
+      messaging.getToken().then(function (currentToken) {
+        if (currentToken) {
+          console.log('Current token: ', currentToken);
+        } else {
+          console.log('No Instance ID token available. Request permission to generate one.');
+        }
+      }).catch(function (err) {
+        console.log('An error occurred while retrieving token. ', err);
+      });
+    }).catch(function (err) {
+      console.log('Unable to get permission to notify.', err);
+    });
+     `
