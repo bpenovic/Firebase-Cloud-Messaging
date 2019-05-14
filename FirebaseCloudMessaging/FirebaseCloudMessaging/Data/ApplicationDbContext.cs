@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using FirebaseCloudMessaging.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FirebaseCloudMessaging.Data
@@ -9,5 +10,7 @@ namespace FirebaseCloudMessaging.Data
             : base(options)
         {
         }
+
+        public DbSet<Token> Tokens { get; set; }
     }
 }
