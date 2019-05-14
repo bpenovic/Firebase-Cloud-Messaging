@@ -38,4 +38,9 @@ Inside wwwroot/lib create new js file which will handle token.
     }).catch(function (err) {
       console.log('Unable to get permission to notify.', err);
     });
-     
+
+Inside Views/Home index.cshtml add Script section:
+
+     @section Scripts {
+         <script src="~/js/init-firebase.js"></script>
+     }
