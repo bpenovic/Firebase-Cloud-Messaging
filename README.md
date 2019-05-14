@@ -7,7 +7,7 @@ Firebase Cloud Messaging workshop for DUMP Days 2019. conference
 3. Create form for sending notifications
 4. Handle sending notifications
 
-## 1. Get and store user tokens
+## 2. Get and store user tokens
 At the bottom of layout page add firebase scripts  
 
      <!-- Firebase JS SDKs -->
