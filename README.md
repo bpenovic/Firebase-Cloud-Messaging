@@ -42,3 +42,4 @@ messaging.requestPermission().then(function () {
 }).catch(function (err) {
   console.log('Unable to get permission to notify.', err);
 });
+`
