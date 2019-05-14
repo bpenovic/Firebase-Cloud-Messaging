@@ -45,4 +45,4 @@ Inside Views/Home index.cshtml add Script section:
          <script src="~/js/init-firebase.js"></script>
      }
 
-Now, when we start the application with https url, we should be asked for notifications and after that get token (See in console f12)
+**Now, when we start the application with https url, we should be asked for notifications and after that get token (See in console f12)**
