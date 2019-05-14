@@ -14,3 +14,31 @@ At the bottom of layout page add firebase scripts
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-messaging.js"></script>
     <!----> `
+
+Inside wwwroot/lib create new js file which will handle token.
+
+` // Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  //Your firebase config
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Retrieve Firebase Messaging object.
+const messaging = firebase.messaging();
+
+messaging.requestPermission().then(function () {
+  console.log('Notification permission granted.');
+  messaging.getToken().then(function (currentToken) {
+    if (currentToken) {
+      console.log('Current token: ', currentToken);
+    } else {
+      console.log('No Instance ID token available. Request permission to generate one.');
+    }
+  }).catch(function (err) {
+    console.log('An error occurred while retrieving token. ', err);
+  });
+}).catch(function (err) {
+  console.log('Unable to get permission to notify.', err);
+});
