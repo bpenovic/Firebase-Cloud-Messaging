@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -46,7 +47,12 @@ namespace FirebaseCloudMessaging
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            var httpClient = new HttpClient();
+            services.AddSingleton<HttpClient>(httpClient);
             services.AddTransient<INotificationService, NotificationService>();
+
+            services.Configure<FcmConfig>(Configuration.GetSection("FcmConfig"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
