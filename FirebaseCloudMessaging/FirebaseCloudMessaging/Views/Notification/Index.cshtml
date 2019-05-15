@@ -1,8 +1,32 @@
-﻿
+﻿@model NotificationViewModel
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Send Notification</h1>
+<form asp-action="Index" asp-controller="Notification" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title" class="form-control"/>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Message"></label>
+        <textarea asp-for="Message" class="form-control"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Icon"></label>
+        <input type="text" asp-for="Icon" class="form-control"/>
+        <span asp-validation-for="Icon" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Link"></label>
+        <input type="text" asp-for="Link" class="form-control"/>
+        <span asp-validation-for="Link" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
