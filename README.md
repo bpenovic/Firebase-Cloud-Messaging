@@ -1,5 +1,6 @@
 # Firebase Cloud Messaging
-Firebase Cloud Messaging workshop for DUMP Days 2019. conference. Project is created using ASP.Net Core 2.2 with MS SQL.
+Firebase Cloud Messaging workshop for DUMP Days 2019. conference.  
+Project is created using ASP.Net Core 2.2 with MS SQL.
 
 ### Steps 
 1. [Initial project with Identity](https://github.com/bpenovic/Firebase-Cloud-Messaging/tree/1.-Init-project-with-identity)
