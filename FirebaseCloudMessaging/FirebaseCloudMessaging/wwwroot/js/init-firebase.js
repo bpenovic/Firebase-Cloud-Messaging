@@ -51,5 +51,5 @@ messaging.onMessage(function (payload) {
 });
 
 function SaveToken(tokenValue) {
-  $.post(saveTokenUrl, { value: tokenValue });
+  $.post(saveTokenUrl, { token: tokenValue });
 }

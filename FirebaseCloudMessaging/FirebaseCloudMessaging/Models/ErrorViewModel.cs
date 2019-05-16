@@ -1,5 +1,3 @@
-using System;
-
 namespace FirebaseCloudMessaging.Models
 {
     public class ErrorViewModel

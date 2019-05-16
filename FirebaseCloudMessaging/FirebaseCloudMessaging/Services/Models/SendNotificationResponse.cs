@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace FirebaseCloudMessaging.Services.Models
+﻿namespace FirebaseCloudMessaging.Services.Models
 {
     public class SendNotificationResponse
     {

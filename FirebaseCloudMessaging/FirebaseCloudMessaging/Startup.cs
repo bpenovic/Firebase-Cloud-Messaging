@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Net.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FirebaseCloudMessaging.Data;
-using FirebaseCloudMessaging.Data.Models;
 using FirebaseCloudMessaging.Services;
 using FirebaseCloudMessaging.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -47,8 +41,7 @@ namespace FirebaseCloudMessaging
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            var httpClient = new HttpClient();
-            services.AddSingleton<HttpClient>(httpClient);
+            services.AddSingleton<HttpClient>(new HttpClient());
             services.AddTransient<INotificationService, NotificationService>();
 
             services.Configure<FcmConfig>(Configuration.GetSection("FcmConfig"));

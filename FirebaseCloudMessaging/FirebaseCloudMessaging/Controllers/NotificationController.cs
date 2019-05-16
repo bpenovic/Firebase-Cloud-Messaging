@@ -43,12 +43,12 @@ namespace FirebaseCloudMessaging.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveToken(TokenViewModel token)
+        public async Task<IActionResult> SaveToken(string token)
         {
-            if (!ModelState.IsValid)
+            if (!string.IsNullOrEmpty(token))
                 return BadRequest("Token is not saved to Database!");
 
-            await _notificationService.SaveTokenAsync(token.Value);
+            await _notificationService.SaveTokenAsync(token);
             return Ok("Token is saved to Database!");
         }
     }
