@@ -8,3 +8,5 @@ Project is created using ASP.Net Core 2.2 with MS SQL.
 3. [Create form and send notifications](https://github.com/bpenovic/Firebase-Cloud-Messaging/tree/3.-Create-form-for-sending-notifications)  
   
 
+### Production
+https://fcm-lilcodelab.azurewebsites.net/
