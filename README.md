@@ -9,4 +9,4 @@ Project is created using ASP.Net Core 2.2 with MS SQL.
   
 
 ### Production
-https://fcm-lilcodelab.azurewebsites.net/
+You can find this project online: https://fcm-lilcodelab.azurewebsites.net/
